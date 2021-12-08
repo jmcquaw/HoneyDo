@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:honeyDo/widgets.dart';
 
+//second page of the app for the new added tasks
 class Taskpage extends StatefulWidget {
   @override
   _TaskpageState createState() => _TaskpageState();
@@ -24,7 +25,7 @@ class _TaskpageState extends State<Taskpage> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.pop(context); //this lets user go back to previous page
                         },
                       child: Padding(
                         padding: const EdgeInsets.all(24.0),
@@ -34,10 +35,10 @@ class _TaskpageState extends State<Taskpage> {
                       ),
                     ),
                     Expanded(
-                      child: TextField(
+                      child: TextField( //text field for the new task title
                         decoration: InputDecoration(
                           hintText: "Enter Task Title",
-                          border: InputBorder.none,
+                          border: InputBorder.none, //gets rid of the border
                         ),
                         style: TextStyle(
                           fontSize: 26.0,
@@ -49,7 +50,7 @@ class _TaskpageState extends State<Taskpage> {
                   ],
                 ),
               ),
-              TextField(
+              TextField( //text field for new task description
                 decoration: InputDecoration(
                   hintText: "What would you like to get done today?",
                   border: InputBorder.none,

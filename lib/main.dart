@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //turned debugger banner off
       theme: ThemeData(
-        textTheme: GoogleFonts.nunitoSansTextTheme(
+        textTheme: GoogleFonts.nunitoSansTextTheme( //font was added from google fonts package in pubspec.yaml
           Theme.of(context).textTheme,
         ),
       ),

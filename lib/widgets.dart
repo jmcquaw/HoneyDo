@@ -23,7 +23,7 @@ class TaskCardWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            title ?? "(Unnamed Task)",
+            title ?? "(Unnamed Task)", //this will let us pass in title to empty task widgets in homepage
             style: TextStyle(
               color: Color(0xFF55A469),
               fontSize: 22.0,
@@ -35,7 +35,7 @@ class TaskCardWidget extends StatelessWidget {
               top: 32.0,
             ),
             child: Text(
-              desc ?? "No description added",
+              desc ?? "No description added", //this will let us pass in desc to empty task widgets in homepage
                 style: TextStyle(
                   fontSize: 16.0,
                   color: Color(0xFF868290),
@@ -49,7 +49,7 @@ class TaskCardWidget extends StatelessWidget {
   }
 }
 
-
+//checkbox widget
 class TodoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
