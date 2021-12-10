@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:honeyDo/screens/homepage.dart';
+import 'package:honeyDo/screens/login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //turned debugger banner off
+      title: '@Protocol Demo',
       theme: ThemeData(
-        textTheme: GoogleFonts.nunitoSansTextTheme( //font was added from google fonts package in pubspec.yaml
-          Theme.of(context).textTheme,
-        ),
+        primarySwatch: Colors.deepOrange,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Homepage(),
+      initialRoute: LoginScreen.id,
+      routes: <String, Widget Function(BuildContext)>{
+        LoginScreen.id: (BuildContext context) => LoginScreen(),
+        Homepage.id: (BuildContext context) => Homepage(),
+      },
     );
   }
 }
