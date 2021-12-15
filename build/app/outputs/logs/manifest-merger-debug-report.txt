@@ -35,6 +35,7 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ben
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\bd5764f4c331824c99e9d79fb8747f5a\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.6.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\7d77d4ebbaf550305d01ed54778f79fb\core-1.6.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\5185196760797c5871cd3285326455b4\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\f4f67a78de15ce9516e92ad8c25a1f7c\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\ed95a939716c8bceaa81701ba59827b7\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\569fec21e685ebc91747b776aa7601ed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -44,7 +45,6 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\bengi\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\5442f788968b39a48dcb49e47168d075\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\49453516ac3063b58b9054b4c7abd4fe\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\56207dc39f1d72d001baaf6252e9e7e4\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\8c0c3629630e003ab855e473771dcdd3\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\98bb0b7f8d7e29d2fbb06af45f4134a3\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\98fc4744c88a257eab0322acb71d3a57\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -234,6 +234,8 @@ MERGED from [androidx.core:core:1.6.0] C:\Users\bengi\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.6.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\7d77d4ebbaf550305d01ed54778f79fb\core-1.6.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\5185196760797c5871cd3285326455b4\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\5185196760797c5871cd3285326455b4\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\f4f67a78de15ce9516e92ad8c25a1f7c\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\f4f67a78de15ce9516e92ad8c25a1f7c\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\ed95a939716c8bceaa81701ba59827b7\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -252,8 +254,6 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bengi\.gradle\
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\49453516ac3063b58b9054b4c7abd4fe\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\56207dc39f1d72d001baaf6252e9e7e4\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\56207dc39f1d72d001baaf6252e9e7e4\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\14c6e2edca7a3ad4c434b561a96c8d01\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\8c0c3629630e003ab855e473771dcdd3\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\8c0c3629630e003ab855e473771dcdd3\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bengi\.gradle\caches\transforms-2\files-2.1\98bb0b7f8d7e29d2fbb06af45f4134a3\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44

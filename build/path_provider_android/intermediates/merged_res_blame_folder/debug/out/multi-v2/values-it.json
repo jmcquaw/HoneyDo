@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\bengi\\StudioProjects\\HoneyDo\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\values-it\\values-it.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bengi\\.gradle\\caches\\transforms-2\\files-2.1\\fdaa1192764eab6ea9cb59f6a77dd214\\core-1.1.0\\res\\values-it\\values-it.xml",
+                    "source": "C:\\Users\\bengi\\.gradle\\caches\\transforms-2\\files-2.1\\7d77d4ebbaf550305d01ed54778f79fb\\core-1.6.0\\res\\values-it\\values-it.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "C:\\Users\\bengi\\StudioProjects\\HoneyDo\\build\\path_provider_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bengi\\.gradle\\caches\\transforms-2\\files-2.1\\fdaa1192764eab6ea9cb59f6a77dd214\\core-1.1.0\\res\\values-it\\values-it.xml",
+                    "source": "C:\\Users\\bengi\\.gradle\\caches\\transforms-2\\files-2.1\\7d77d4ebbaf550305d01ed54778f79fb\\core-1.6.0\\res\\values-it\\values-it.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
