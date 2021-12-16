@@ -49,36 +49,45 @@ class _MyAppState extends State<MyApp> {
           title: const Text('MyApp'),
         ),
         body: Builder(
-          builder: (context) => Center(
-                child: ElevatedButton(
-                  onPressed: () async {
-                    var preference = await futurePreference;
-                    setState(() {
-                      atClientPreference = preference;
-                    });
-                    Onboarding(
-                      context: context,
-                      atClientPreference: atClientPreference!,
-                      domain: AtEnv.rootDomain,
-                      rootEnvironment: AtEnv.rootEnvironment,
-                      appAPIKey: AtEnv.appApiKey,
-                      onboard: (value, atsign) {
-                        _logger.finer('Successfully onboarded $atsign');
-                      },
-                      onError: (error) {
-                        _logger.severe('Onboarding throws $error error');
-                      },
-                      nextScreen: Homepage(),
-                    );
+          builder: (context) =>
+            Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () async {
+                      var preference = await futurePreference;
+                      setState(() {
+                        atClientPreference = preference;
+                      });
+                      Onboarding(
+                        context: context,
+                        atClientPreference: atClientPreference!,
+                        domain: AtEnv.rootDomain,
+                        rootEnvironment: AtEnv.rootEnvironment,
+                        appAPIKey: AtEnv.appApiKey,
+                        onboard: (value, atsign) {
+                          _logger.finer('Successfully onboarded $atsign');
+                        },
+                        onError: (error) {
+                          _logger.severe('Onboarding throws $error error');
+                        },
+                        nextScreen: Homepage(),
+                      );
+                    },
+                    child: const Text('Onboard an @sign'),
+                  ),
+
+                  ElevatedButton(
+                    onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=>Homepage()));
                   },
-                  child: const Text('Onboard an @sign'),
-                ),
+                    child: const Text("Use Local Storage"),
+              ),
+                ],
               ),
               ),
+        ),
 
-                ),
               );
-
   }
 }
-
