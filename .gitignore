@@ -30,7 +30,6 @@
 .pub-cache/
 .pub/
 /build/
-build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin
 /build/app/outputs/flutter-apk/app.apk
 # Web related
 lib/generated_plugin_registrant.dart
@@ -47,4 +46,4 @@ app.*.map.json
 /android/app/release
 /build/app/outputs/
 /windows/
-/build/
+
