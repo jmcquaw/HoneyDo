@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:honeyDo/widgets.dart';
+import 'package:honeyDo/theme/custom_theme.dart';
 
 //second page of the app for the new added tasks
 class Taskpage extends StatefulWidget {

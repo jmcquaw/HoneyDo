@@ -24,7 +24,11 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-
+  fonts:
+    - family: Comfortaa
+      fonts:
+        - asset: assets/Comfortaa-Regular.ttf
+        - asset: assets/Comfortaa-VariableFont_wght.ttf
   uses-material-design: true
 
 

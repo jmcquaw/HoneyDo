@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:honeyDo/widgets.dart';
 import 'package:honeyDo/screens/taskpage.dart';
-<<<<<<< HEAD
 import 'package:honeyDo/theme/custom_theme.dart';
 import '../service/client_sdk_service.dart';
-=======
->>>>>>> parent of b4ce4b2 (Added custom theme colors and shapes, for consistency)
+
 
 //stateful widget because the UI will change dynamically as new lists get added
 class Homepage extends StatefulWidget {
@@ -14,11 +12,6 @@ class Homepage extends StatefulWidget {
   static final String id = 'homepage';
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> parent of b4ce4b2 (Added custom theme colors and shapes, for consistency)
 class _HomepageState extends State<Homepage> {
   ClientSdkService clientSdkService = ClientSdkService.getInstance();
   String activeAtSign = '';
@@ -61,7 +54,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     child: Image(
                       image: AssetImage( //images are found in the assets folder
-                        'assets/images/logo.png',
+                        'assets/images/melonlogo.png',
                       ),
                     ),
                   ),
