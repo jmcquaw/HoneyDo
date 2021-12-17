@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<list id='0'>
+		<title>chores</title>
+		<entry id='0'>
+			<description>laundry</description>
+			<done>false</done>
+		</entry>
+		<entry id='1'>
+			<description>dishes</description>
+			<done>false</done>
+		</entry>
+		<entry id='2'>
+			<description>trash</description>
+			<done>false</done>
+		</entry>
+	</list>
+	<list id='1'>
+		<title> xmas gifts</title>
+		<entry id='0'>
+			<description>vinyl record - james</description>
+			<done>true</done>
+		</entry>
+		<entry id='1'>
+			<description>sweater - mom</description>
+			<done>false</done>
+		</entry>
+		<entry id='2'>
+			<description>apple gift card - aidan</description>
+			<done>true</done>
+		</entry>
+	</list>
+</root>
