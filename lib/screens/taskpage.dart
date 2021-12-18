@@ -1,13 +1,15 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:honeyDo/widgets.dart';
+
 import '../service/honeyXML.dart';
 
 
 //second page of the app for the new added tasks
 class taskpage extends StatefulWidget {
-  taskpage();
+  taskpage(String passedID);
+
+
 
   @override
   _taskpageState createState() => _taskpageState();

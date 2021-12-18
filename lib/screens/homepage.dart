@@ -128,6 +128,7 @@ class homepage extends StatefulWidget {
 class _homepageState extends State<homepage> {
   var titlesList = <String>[]; //these are initializations for access on demand
   List<ElevatedButton> buttonsList = <ElevatedButton>[];
+
   //todo figure out why this refuses actual files but doesnt crash with an explicit string
   final honeyxml = XmlDocument.parse('''
     <?xml version="1.0"?>
@@ -173,26 +174,33 @@ class _homepageState extends State<homepage> {
     //print(raw.toString()); //this line exists for debugging purposes
     print("attempting to parse");
     //takes the string and returns an xml document type
-    print("xmlreadfine");//debugstuff
-    var titles = honeyxml.findAllElements("title");//search for the element with a title tag, toss all results in a list
-    titles.map((node) => node.text).forEach((content) { //get the content from the title tags
+    print("xmlreadfine"); //debugstuff
+    var titles = honeyxml.findAllElements(
+        "title"); //search for the element with a title tag, toss all results in a list
+    titles.map((node) => node.text).forEach((content) {
+      //get the content from the title tags
       titlesList.add(content);
     });
   }
 
   List<Widget> buildListButtons() {
-    buttonsList.add(new ElevatedButton(
-      onPressed: taskpage(-1), //the int -1 will indicated for the taskpage to generate a new list
+    buttonsList.add(new ElevatedButton( //the first item in the list will generate a new list button
+      onPressed: null, //TODO PASS DATA WITH THIS
+      //passing -1 will indicated for the taskpage to generate a new list
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Color(0xffC8A4F8)),
           textStyle: (MaterialStateProperty.all(
               TextStyle(color: Colors.white, fontSize: 18)))),
       child: Text("Add New List"),
     ));
-    for (int i = 0; i < titlesList.length; i++) {
-      buttonsList.add(new ElevatedButton( //make a button
-          onPressed: taskpage(i), //this passes the associated ID so we know where to read on the other side
-          style: ButtonStyle( //just making it pretty
+    for (int i = 0; i < titlesList.length; i++) { //all of these buttons are generated from the xml lists tags
+      buttonsList.add(new ElevatedButton(
+          //make a button
+
+          onPressed: null, //TODO PASS DATA WITH THIS, WE NEED ANY STRING TO COME OUT ON THE OTHER SIDE
+          //this passes the associated ID so we know where to read on the other side
+          style: ButtonStyle(
+              //just making it pretty
               backgroundColor: MaterialStateProperty.all(Color(0xffdfecb7)),
               textStyle: (MaterialStateProperty.all(
                   TextStyle(color: Colors.black, fontSize: 18)))),
@@ -205,34 +213,31 @@ class _homepageState extends State<homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff7ad45),
-      body: SafeArea(
-        child:
-            // Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            // mainAxisAlignment: MainAxisAlignment.start,
-            // children: [
-            Container(
+      body: Column(
+        children: <Widget>[
+          Container(
+              padding: EdgeInsets.fromLTRB(45, 50, 45, 0), //dont touch edges
+              child: AspectRatio(
+                  aspectRatio: 982 / 320, //ensures the logo fits properly
+                  child: Image.asset(
+                    'assets/images/logowtag.png',
+                    fit: BoxFit.fill, //fills the correct space dynamically
+                    alignment: Alignment.center, //keeps in place
+                  ))),
+          Expanded(
+            child: Container(
                 // width: double.infinity,
-                padding: EdgeInsets.fromLTRB(20, 150, 20, 0),//leave a little room
-                alignment: Alignment.topCenter,//snap to top
-                child: ListView(//scrollable list
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                //leave a little room
+                alignment: Alignment.topCenter,
+                //snap to top
+                child: ListView(
+                  //scrollable list
                   children: buildListButtons(),
                 )),
-        // AspectRatio( //todo not critical but itd be nice to have this logo appear above the list on the homepage.
-        //     aspectRatio: 714 / 1440,
-        //     child: Container(
-        //       decoration: BoxDecoration(
-        //         image: DecorationImage(
-        //           alignment: Alignment.topCenter,
-        //           image: AssetImage('assets/images/logowtag.png'),
-        //           // fit: BoxFit.scaleDown,
-        //         ),
-        //         // shape: BoxShape.circle,
-        //       ),
-        //     )),
-        // ],
-      // ),
-      )
+          )
+        ],
+      ),
     );
   }
 }

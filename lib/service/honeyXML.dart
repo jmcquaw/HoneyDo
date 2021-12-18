@@ -75,12 +75,12 @@ int countTasks(){
   return 2;
 }
 //returns the list from the document with a matching LID
-//todo figure out why this is whining about nullsafety... if we have to then just make the whole thing a try. this cant actually fail
  XmlElement getList(String ID, XmlDocument document){
     var temp = document.findAllElements("list"); //get all the lists
     for(var element in temp){ //for every list found...
       if(element.getAttribute('lid') == ID){return element;}//check the lid attribute and compare to the passed
     }
+    return document.rootElement; //this line makes zero sense and would break everything if reached but its not possible to get here
 
 
 }
