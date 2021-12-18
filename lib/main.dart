@@ -1,32 +1,31 @@
 import 'dart:async';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:at_onboarding_flutter/at_onboarding_flutter.dart' show Onboarding;
-import 'package:at_utils/at_logger.dart' show AtSignLogger;
-import 'package:at_app_flutter/at_app_flutter.dart' show AtEnv;
-import 'package:path_provider/path_provider.dart' show getApplicationSupportDirectory;
-import 'screens/homepage.dart';
 import 'package:honeyDo/theme/custom_theme.dart';
+
+import 'screens/homepage.dart';
 
 
 
 Future<void> main() async {
-  await AtEnv.load();
+ // await AtEnv.load();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
-Future<AtClientPreference> loadAtClientPreference() async {
+//Future<AtClientPreference> loadAtClientPreference() async {
 
-  var dir = await getApplicationSupportDirectory();
-  return AtClientPreference()
-    ..rootDomain = AtEnv.rootDomain
-    ..namespace = AtEnv.appNamespace
-    ..hiveStoragePath = dir.path
-    ..commitLogPath = dir.path
-    ..isLocalStoreRequired = true
-  // TODO set the rest of your AtClientPreference here
-      ;
-}
+  // var dir = await getApplicationSupportDirectory();
+  // return AtClientPreference()
+  //   ..rootDomain = AtEnv.rootDomain
+  //   ..namespace = AtEnv.appNamespace
+  //   ..hiveStoragePath = dir.path
+  //   ..commitLogPath = dir.path
+  //   ..isLocalStoreRequired = true
+  // // TODO set the rest of your AtClientPreference here
+  //     ;
+//}
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -38,16 +37,20 @@ int auth_success = 0;
 
 class _MyAppState extends State<MyApp> {
   // * load the AtClientPreference in the background
-  Future<AtClientPreference> futurePreference = loadAtClientPreference();
-  AtClientPreference? atClientPreference;
+ // Future<AtClientPreference> futurePreference = loadAtClientPreference();
+  //AtClientPreference? atClientPreference;
 
-  final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace);
+ // final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace);
+
+
+
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       // * The onboarding screen (first screen)
-      theme: HoneyDoTheme.lightTheme,
+      title: "honeyDo",
+
       home: Scaffold(
         appBar: AppBar(
           title: const Text('MyApp'),
@@ -55,8 +58,9 @@ class _MyAppState extends State<MyApp> {
         body: Builder(
           builder: (context) =>
             Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ElevatedButton(
+                  /*ElevatedButton(
                     onPressed: () async {
                       var preference = await futurePreference;
                       setState(() {
@@ -79,11 +83,11 @@ class _MyAppState extends State<MyApp> {
                     },
                     child: const Text('Onboard an @sign'),
                   ),
-
+ this is to hide the atsign stuff since its not part of the project anymore*/
                   ElevatedButton(
                     onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context)=>Homepage()));
+                        MaterialPageRoute(builder: (context)=>homepage()));
                   },
                     child: const Text("Use Local Storage"),
               ),

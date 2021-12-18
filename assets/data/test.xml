@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<root>
+	<list lid='0'>
+		<title>chores</title>
+		<task tid='0'>
+			<description>laundry</description>
+			<status>false</status>
+		</task>
+		<task tid='1'>
+			<description>dishes</description>
+			<status>false</status>
+		</task>
+		<task tid='2'>
+			<description>trash</description>
+			<status>false</status>
+		</task>
+	</list>
+	<list lid='1'>
+		<title> xmas gifts</title>
+		<task tid='0'>
+			<description>vinyl record - james</description>
+			<status>true</status>
+		</task>
+		<task tid='1'>
+			<description>sweater - mom</description>
+			<status>false</status>
+		</task>
+		<task tid='2'>
+			<description>apple gift card - aidan</description>
+			<status>true</status>
+		</task>
+	</list>
+</root>

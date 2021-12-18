@@ -1,15 +1,31 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:honeyDo/widgets.dart';
-import 'package:honeyDo/theme/custom_theme.dart';
+import '../service/honeyXML.dart';
+
 
 //second page of the app for the new added tasks
-class Taskpage extends StatefulWidget {
+class taskpage extends StatefulWidget {
+  taskpage();
+
   @override
-  _TaskpageState createState() => _TaskpageState();
+  _taskpageState createState() => _taskpageState();
+
 }
 
-class _TaskpageState extends State<Taskpage> {
-  @override
+class _taskpageState extends State<taskpage> {
+
+
+
+
+
+
+
+
+
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -61,8 +77,24 @@ class _TaskpageState extends State<Taskpage> {
                 ),
               ),
               TodoWidget(),
+
+              ElevatedButton(
+                onPressed: () {
+                  toggleStatus();
+
+                },
+                child: const Text("run test function 1"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  toggleStatus();
+
+                },
+                child: const Text("run test function 2"),
+              ),
             ],
-          )
+          ),
+
         ),
       ),
     );

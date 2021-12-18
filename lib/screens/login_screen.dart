@@ -1,4 +1,6 @@
-import 'dart:ui';
+
+//THIS SCREEN IS NO LONGER REQUIRED BUT MAY BE USEFUL FOR REFERENCE OR IF THE ATSIGN FUNCTIONS NEED REENABLING
+/*import 'dart:ui';
 // import 'package:newserverdemo/screens/home_screen.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:flutter/material.dart';
@@ -121,4 +123,4 @@ class _LoginScreen extends State<LoginScreen> {
   }
 
 
-}
+}*/
