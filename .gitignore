@@ -46,4 +46,6 @@ app.*.map.json
 /android/app/release
 /build/app/outputs/
 /windows/
+/andoid/
+/ios/
 

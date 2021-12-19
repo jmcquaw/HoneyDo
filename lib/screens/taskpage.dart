@@ -9,24 +9,12 @@ import '../service/honeyXML.dart';
 class taskpage extends StatefulWidget {
   taskpage(String passedID);
 
-
-
   @override
   _taskpageState createState() => _taskpageState();
 
 }
 
 class _taskpageState extends State<taskpage> {
-
-
-
-
-
-
-
-
-
-
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +66,7 @@ class _taskpageState extends State<taskpage> {
                   )
                 ),
               ),
-              TodoWidget(),
+              TodoWidget(task: 'sample', isDone: false, onToggle: TaskToggler()),
 
               ElevatedButton(
                 onPressed: () {
