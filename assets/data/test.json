@@ -1,0 +1,46 @@
+{
+   "list": [
+      {
+         "title": "chores",
+         "task": [
+            {
+               "description": "laundry",
+               "status": "false",
+               "_tid": "0"
+            },
+            {
+               "description": "dishes",
+               "status": "false",
+               "_tid": "1"
+            },
+            {
+               "description": "trash",
+               "status": "false",
+               "_tid": "2"
+            }
+         ],
+         "_lid": "0"
+      },
+      {
+         "title": "xmas gifts",
+         "task": [
+            {
+               "description": "vinyl record - james",
+               "status": "true",
+               "_tid": "0"
+            },
+            {
+               "description": "sweater - mom",
+               "status": "false",
+               "_tid": "1"
+            },
+            {
+               "description": "apple gift card - aidan",
+               "status": "true",
+               "_tid": "2"
+            }
+         ],
+         "_lid": "1"
+      }
+   ]
+}
