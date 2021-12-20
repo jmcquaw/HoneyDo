@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:honeyDo/screens/doList.dart';
 import 'package:honeyDo/screens/task.dart';
 
@@ -8,8 +7,7 @@ import 'homepage.dart';
 //second page of the app for the new added tasks
 class taskpage extends StatefulWidget {
   final int activeID; //this var keeps track of which dolist we are working on
-  final List<doList>
-      lists; //this is the list of objects that contains all of the data
+  final List<doList> lists; //this is the list of objects that contains all of the data
 
   taskpage({Key? key, required this.lists, required this.activeID})
       : super(key: key); //allows for passing of data between screens
@@ -27,10 +25,8 @@ class _taskpageState extends State<taskpage> {
     checkboxList = [];
     for (int i = 0; i < widget.lists[widget.activeID].tasks.length; i++) {
       //generate a list of checkboxestiles
-      bool temp = widget.lists[widget.activeID].tasks[i]
-          .status; //this temp bool is to set initial state of thebox
+      bool temp = widget.lists[widget.activeID].tasks[i].status; //this temp bool is to set initial state of thebox
 
-      var key;
       checkboxList.add(new Dismissible(
           key: UniqueKey(),
           background: Container(color: Colors.red),
@@ -39,25 +35,24 @@ class _taskpageState extends State<taskpage> {
             setState(() {
               widget.lists[widget.activeID].tasks.removeAt(i);
             });
-          }
-
-
-          ,
+          },
           child: CheckboxListTile(
               controlAffinity: ListTileControlAffinity.leading,
               //put the checkbox before the text
-              activeColor: Color(0xffc5dd9f),
+              activeColor: Colors.black,
               //pretty
-              checkColor: Color(0xff000000),
+              checkColor: Colors.white,
               //pretty
+              selected: widget.lists[widget.activeID].tasks[i].status,
+              selectedTileColor: Color(0xff77DD76),
               title: Text(widget.lists[widget.activeID].tasks[i].description),
               value: temp,
+              tileColor: Color(0xffD2FDBB),
               enableFeedback: true,
               //haptic/audio on interact
               onChanged: (temp) {
                 setState(() {
-                  widget.lists[widget.activeID].tasks[i].status =
-                      !widget.lists[widget.activeID].tasks[i].status;
+                  widget.lists[widget.activeID].tasks[i].status = !widget.lists[widget.activeID].tasks[i].status;
                 }); //flip the status in the object and refresh the screeen
               })));
     }
@@ -66,6 +61,7 @@ class _taskpageState extends State<taskpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffdfd97),
       body: SafeArea(
         child: Container(
           child: Column(
@@ -83,15 +79,13 @@ class _taskpageState extends State<taskpage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => homepage(
-                                    lists: widget
-                                        .lists))); //go back to homepage and pass the lists
+                                builder: (context) =>
+                                    homepage(lists: widget.lists))); //go back to homepage and pass the lists
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(24.0),
                         child: Image(
-                          image:
-                              AssetImage('assets/images/back_arrow_icon.png'),
+                          image: AssetImage('assets/images/back_arrow_icon.png'),
                         ),
                       ),
                     ),
@@ -100,14 +94,14 @@ class _taskpageState extends State<taskpage> {
                         controller: titleTEC,
                         onSubmitted: (String value) {
                           setState(() {
-                            widget.lists[widget.activeID].title =
-                                value; //update title and refresh screen
+                            widget.lists[widget.activeID].title = value; //update title and refresh screen
                             taskTEC.clear(); //clears the text field
                           });
                         },
                         //text field for the new task title
                         decoration: InputDecoration(
                           hintText: widget.lists[widget.activeID].title,
+                          hintStyle: TextStyle(color: Colors.black),
                           border: InputBorder.none, //gets rid of the border
                         ),
                         style: TextStyle(
@@ -128,17 +122,14 @@ class _taskpageState extends State<taskpage> {
                   setState(() {
                     //update the list and refresh the screen
                     widget.lists[widget.activeID].tasks.add(task(
-                        value,
-                        false,
-                        widget.lists[widget.activeID].tasks
-                            .length)); //make a new task with entered data
+                        value, false, widget.lists[widget.activeID].tasks.length)); //make a new task with entered data
                     taskTEC.clear();
                   });
                 },
 
                 decoration: InputDecoration(
                     hintText: "What would you like to get done today?",
-                    border: InputBorder.none,
+                    hintStyle: TextStyle(fontStyle: FontStyle.italic, color: Colors.black),
                     contentPadding: EdgeInsets.symmetric(
                       horizontal: 24.0,
                     )),
@@ -146,7 +137,7 @@ class _taskpageState extends State<taskpage> {
               Expanded(
                 child: Container(
                     // width: double.infinity,
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                     //leave a little room
                     alignment: Alignment.topCenter,
                     //snap to top

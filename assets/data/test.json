@@ -6,20 +6,20 @@
             {
                "description": "laundry",
                "status": "false",
-               "_tid": "0"
+               "tid": "0"
             },
             {
                "description": "dishes",
                "status": "false",
-               "_tid": "1"
+               "tid": "1"
             },
             {
                "description": "trash",
                "status": "false",
-               "_tid": "2"
+               "tid": "2"
             }
          ],
-         "_lid": "0"
+         "lid": "0"
       },
       {
          "title": "xmas gifts",
@@ -27,20 +27,20 @@
             {
                "description": "vinyl record - james",
                "status": "true",
-               "_tid": "0"
+               "tid": "0"
             },
             {
                "description": "sweater - mom",
                "status": "false",
-               "_tid": "1"
+               "tid": "1"
             },
             {
                "description": "apple gift card - aidan",
                "status": "true",
-               "_tid": "2"
+               "tid": "2"
             }
          ],
-         "_lid": "1"
+         "lid": "1"
       }
    ]
 }

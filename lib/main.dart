@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:honeyDo/screens/doList.dart';
 import 'package:honeyDo/screens/task.dart';
 
@@ -32,7 +34,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-List<doList> populateListsTest() { //hand create a couple lists to start,
+List<doList> populateListsTest() {
+  //hand create a couple lists to start,
   List<doList> lists = [];
   lists.add(doList('chores', lists.length, []));
   lists[0].tasks.add(task('laundry', false, lists[0].tasks.length));
@@ -42,9 +45,7 @@ List<doList> populateListsTest() { //hand create a couple lists to start,
   lists.add(doList('xmas gifts', lists.length, []));
   lists[1].tasks.add(task('vinyl record - james', true, lists[1].tasks.length));
   lists[1].tasks.add(task('sweater - mom', false, lists[1].tasks.length));
-  lists[1]
-      .tasks
-      .add(task('apple gift card - aidan', false, lists[1].tasks.length));
+  lists[1].tasks.add(task('apple gift card - aidan', false, lists[1].tasks.length));
 
   return lists;
 }
