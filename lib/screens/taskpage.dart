@@ -39,15 +39,15 @@ class _taskpageState extends State<taskpage> {
           child: CheckboxListTile(
               controlAffinity: ListTileControlAffinity.leading,
               //put the checkbox before the text
-              activeColor: Colors.black,
+              //activeColor: Colors.black,
               //pretty
-              checkColor: Colors.white,
+              checkColor: Color(0xFF211551),
               //pretty
               selected: widget.lists[widget.activeID].tasks[i].status,
-              selectedTileColor: Color(0xff77DD76),
+              //selectedTileColor: Color(0xff77DD76),
               title: Text(widget.lists[widget.activeID].tasks[i].description),
               value: temp,
-              tileColor: Color(0xffD2FDBB),
+              //tileColor: Color(0xffD2FDBB),
               enableFeedback: true,
               //haptic/audio on interact
               onChanged: (temp) {
@@ -61,7 +61,7 @@ class _taskpageState extends State<taskpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffdfd97),
+      //backgroundColor: Color(0xfffdfd97),
       body: SafeArea(
         child: Container(
           child: Column(
